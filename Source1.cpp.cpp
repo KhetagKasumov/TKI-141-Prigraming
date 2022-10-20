@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 /**
 *  \brife Функция расчкта по заданной формуле.
 *  \param x Аргумент функции.
@@ -8,18 +9,21 @@ using namespace std;
 *  \return Звнчение функции.
 */
 const double getA(const double x, const double y, const double z);
+
 /**
 *  \brife Функция расчкта по заданной формуле.
 *  \param x Аргумент функции.
-*  \param zАргумент функции.
-*  \return Звнчение функции.
+*  \param z Аргумент функции.
+*  \return Значение функции.
 */
 const double getB(const double x, const double y, const double z);
+
 /**
 * \brief Точка входа в программу.
 * \return Возращает 0 в случае успеха.
 */
 int main()
+
 {
     const double x = 1.4;
     const double y = 3.1;
