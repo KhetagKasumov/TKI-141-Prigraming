@@ -1,8 +1,9 @@
-﻿#include <iostream>
+#include <iostream>
+
 using namespace std;
 
 /**
-* \brief Водит координаты вершин.
+* \brief Вводит координаты вершин.
 * \param message Побуждающие сообщения для пользователя.
 * \return Координаты вершин.
 */
@@ -72,8 +73,8 @@ int main()
     {
     case userInput::AREA:
     {
-        const auto Area = getArea(x1, y1, x2, y2, x3, y3, half);
-        cout << "Площадь треугольника = " << Area;
+        const auto area = getArea(x1, y1, x2, y2, x3, y3, half);
+        cout << "Площадь треугольника = " << area;
         break;
     }
     case userInput::PERIMETR:
@@ -97,11 +98,10 @@ double getNumbers(const string& message)
 
 double getPerimetr(const double x1, const double y1, const double x2, const double y2, const double x3, const double y3)
 {
-    return pow(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)), 0.5) + pow(((x3 - x2) * (x3 - x2)) + ((y3 - y2) * (y3 - y2)), 0.5) + pow(((x1 - x3) * (x1 - x3)) + ((y1 - y3) * (y1 - y3)), 0.5);
+    return sqrt(((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1))) + sqrt(((x3 - x2) * (x3 - x2)) + ((y3 - y2) * (y3 - y2))) + sqrt(((x1 - x3) * (x1 - x3)) + ((y1 - y3) * (y1 - y3)));
 }
 
 double getArea(const double x1, const double y1, const double x2, const double y2, const double x3, const double y3, const double half)
 {
     return half * (abs(((x2 - x1) * (y3 - y1)) - ((x3 - x1) * (y2 - y1))));
 }
- 
